@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do Manager | DevFusion</title>
+
+    <link rel="stylesheet" href="todo.css">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!--================ NAVBAR ================-->
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-list-check"></i>
+
+DevFusion
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="#dashboard">Dashboard</a>
+
+<a href="#tasks">Tasks</a>
+
+<a href="#progress">Progress</a>
+
+</nav>
+
+</header>
+
+
+<!--================ HERO ================-->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h3>Productivity Dashboard</h3>
+
+<h1>Smart To-Do Manager</h1>
+
+<p>
+
+Manage your daily internship tasks efficiently.
+
+Add, Edit, Delete and Save tasks permanently
+using Local Storage.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!--================ DASHBOARD ================-->
+
+<section id="dashboard">
+
+<h2 class="title">
+
+Today's Summary
+
+</h2>
+
+<div class="summary">
+
+<div class="card">
+
+<i class="fa-solid fa-list"></i>
+
+<h3>Total Tasks</h3>
+
+<h1 id="totalTask">
+
+0
+
+</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h3>Completed</h3>
+
+<h1 id="completedTask">
+
+0
+
+</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Pending</h3>
+
+<h1 id="pendingTask">
+
+0
+
+</h1>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-fire"></i>
+
+<h3>High Priority</h3>
+
+<h1 id="highTask">
+
+0
+
+</h1>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!--================ ADD TASK ================-->
+
+<section id="tasks">
+
+<h2 class="title">
+
+Add New Task
+
+</h2>
+
+<div class="todo-box">
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter Task">
+
+<select id="priority">
+
+<option value="High">
+
+High Priority
+
+</option>
+
+<option value="Medium">
+
+Medium Priority
+
+</option>
+
+<option value="Low">
+
+Low Priority
+
+</option>
+
+</select>
+
+<input
+type="date"
+id="dueDate">
+
+<button id="addTask">
+
+Add Task
+
+</button>
+
+</div<!--================ SEARCH =================-->
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="searchTask"
+        placeholder="🔍 Search Task...">
+
+</div>
+
+</section>
+
+<!--================ TASK LIST =================-->
+
+<section class="task-section">
+
+    <h2 class="title">Task List</h2>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Task</th>
+
+                    <th>Priority</th>
+
+                    <th>Due Date</th>
+
+                    <th>Status</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="taskList">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!--================ PROGRESS =================-->
+
+<section id="progress">
+
+    <h2 class="title">
+
+        Task Progress
+
+    </h2>
+
+    <div class="progress-card">
+
+        <h3>Completion Progress</h3>
+
+        <div class="progress-bar">
+
+            <div class="progress-fill"
+                 id="progressFill">
+
+            </div>
+
+        </div>
+
+        <h2 id="progressText">
+
+            0%
+
+        </h2>
+
+    </div>
+
+</section>
+
+<!--================ QUICK TIPS =================-->
+
+<section class="tips">
+
+    <h2 class="title">
+
+        Productivity Tips
+
+    </h2>
+
+    <div class="tips-container">
+
+        <div class="tip">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>Plan Your Day</h3>
+
+            <p>
+
+                Start every morning by planning
+                today's important tasks.
+
+            </p>
+
+        </div>
+
+        <div class="tip">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Meet Deadlines</h3>
+
+            <p>
+
+                Complete high priority tasks
+                before the due date.
+
+            </p>
+
+        </div>
+
+        <div class="tip">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Track Progress</h3>
+
+            <p>
+
+                Keep checking your completion
+                percentage every day.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ FOOTER =================-->
+
+<footer>
+
+    <h2>
+
+        DevFusion Productivity Hub
+
+    </h2>
+
+    <p>
+
+        Developed by
+
+        <strong>
+
+            Yalala Kavya Reddy
+
+        </strong>
+
+    </p>
+
+    <p>
+
+        Web Development Intern
+
+        | ApexPlanet Software Pvt. Ltd.
+
+    </p>
+
+    <div class="social">
+
+        <a href="#">
+
+            <i class="fab fa-github"></i>
+
+        </a>
+
+        <a href="#">
+
+            <i class="fab fa-linkedin"></i>
+
+        </a>
+
+        <a href="#">
+
+            <i class="fas fa-envelope"></i>
+
+        </a>
+
+    </div>
+
+    <p class="copyright">
+
+        © 2026 DevFusion.
+
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+<script src="todo.js"></script>
+
+</body>
+
+</html>>
+

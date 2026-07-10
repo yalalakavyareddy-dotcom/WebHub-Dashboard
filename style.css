@@ -1,0 +1,600 @@
+/* ==========================================
+   DEVFUSION DASHBOARD
+   Developed by Yalala Kavya Reddy
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --primary:#4F46E5;
+    --secondary:#7C3AED;
+    --accent:#06B6D4;
+    --success:#10B981;
+    --danger:#EF4444;
+    --warning:#F59E0B;
+
+    --white:#ffffff;
+    --dark:#111827;
+    --gray:#6B7280;
+    --light:#F8FAFC;
+
+    --shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+body{
+
+    background:linear-gradient(135deg,#EEF2FF,#F8FAFC);
+    color:var(--dark);
+    overflow-x:hidden;
+
+}
+
+/*==============================
+NAVBAR
+==============================*/
+
+.header{
+
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+
+    padding:18px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:30px;
+    font-weight:700;
+    color:var(--primary);
+
+}
+
+.logo span{
+
+    color:var(--accent);
+
+}
+
+nav{
+
+    display:flex;
+    gap:35px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:var(--dark);
+
+    font-size:16px;
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+/*==============================
+BUTTONS
+==============================*/
+
+.btn{
+
+    display:inline-block;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 25px rgba(79,70,229,.4);
+
+}
+
+.btn-secondary{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    margin-left:15px;
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/*==============================
+HERO SECTION
+==============================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:120px 8% 80px;
+
+}
+
+.hero-text{
+
+    flex:1;
+
+}
+
+.hero-text h3{
+
+    color:var(--accent);
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+}
+
+.hero-text h1{
+
+    font-size:60px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.hero-text h2{
+
+    font-size:32px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    max-width:650px;
+
+    margin-bottom:35px;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:380px;
+
+    height:380px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:var(--shadow);
+
+    transition:.5s;
+
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==============================
+SECTION TITLE
+==============================*/
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+}
+
+.section-title p{
+
+    color:var(--gray);
+
+    margin-top:10px;
+
+    font-size:18px;
+
+}
+
+/*==============================
+GENERAL SECTION
+==============================*/
+
+section{
+
+    padding:80px 8%;
+
+}
+
+/*==============================
+ANIMATION
+==============================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero,
+.section-title{
+
+    animation:fadeUp 1s ease;
+
+/*====================================
+INTERNSHIP SECTION
+====================================*/
+
+.internship{
+
+    background:#fff;
+
+}
+
+.internship-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    background:linear-gradient(135deg,#/*====================================
+PROJECTS SECTION
+====================================*/
+
+.projects{
+    background:#f8fafc;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card i{
+    font-size:55px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.project-card h3{
+    margin-bottom:15px;
+    color:var(--dark);
+}
+
+.project-card p{
+    color:var(--gray);
+    line-height:1.7;
+}
+
+/*====================================
+CONTACT SECTION
+====================================*/
+
+.contact{
+    background:#ffffff;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.contact-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+}
+
+.contact-card i{
+    font-size:45px;
+    color:var(--primary);
+    margin-bottom:18px;
+}
+
+.contact-card h3{
+    margin-bottom:12px;
+}
+
+.contact-card p{
+    color:var(--gray);
+    word-break:break-word;
+}
+
+/*====================================
+CALL TO ACTION
+====================================*/
+
+.cta{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+    text-align:center;
+    padding:90px 8%;
+}
+
+.cta h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.cta-buttons a{
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:50px;
+    background:#fff;
+    color:var(--primary);
+    font-weight:600;
+    transition:.4s;
+}
+
+.cta-buttons a:hover{
+    transform:translateY(-5px);
+}
+
+/*====================================
+FOOTER
+====================================*/
+
+footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:10px 0;
+    color:#d1d5db;
+}
+
+.footer-social{
+    margin:25px 0;
+}
+
+.footer-social a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    margin:0 8px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    transition:.4s;
+}
+
+.footer-social a:hover{
+    background:var(--accent);
+    transform:translateY(-6px);
+}
+
+.copyright{
+    margin-top:20px;
+    font-size:14px;
+    color:#9ca3af;
+}
+
+/*====================================
+RESPONSIVE
+====================================*/
+
+@media(max-width:992px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:50px;
+    }
+
+    .hero-image img{
+        width:300px;
+        height:300px;
+    }
+
+    .hero-text h1{
+        font-size:46px;
+    }
+
+    .internship-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero-text h1{
+        font-size:36px;
+    }
+
+    .hero-text h2{
+        font-size:24px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .dashboard-grid,
+    .skill-grid,
+    .project-grid,
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .hero-image img{
+        width:240px;
+        height:240px;
+    }
+
+    .cta h2{
+        font-size:30px;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+}}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Products | DevFusion Store</title>
+
+<link rel="stylesheet" href="product.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+DevFusion Store
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="#products">Products</a>
+
+<a href="#featured">Featured</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h3>Smart Product Listing</h3>
+
+<h1>Explore Premium Tech Products</h1>
+
+<p>
+
+Search, Filter and Sort products using JavaScript.
+
+Built as part of the ApexPlanet Web Development Internship.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="controls">
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Search Product">
+
+<select id="categoryFilter">
+
+<option value="all">All Categories</option>
+
+<option value="Laptop">Laptop</option>
+
+<option value="Mobile">Mobile</option>
+
+<option value="Accessory">Accessory</option>
+
+</select>
+
+<select id="sort">
+
+<option value="default">Sort By</option>
+
+<option value="low">Price : Low to High</option>
+
+<option value="high">Price : High to Low</option>
+
+<option value="rating">Rating</option>
+
+<option value="name">Name</option>
+
+</select>
+
+</section>
+
+<section id="products">
+
+<h2 class="title">
+
+Featured Products
+
+</h2>
+
+<div id="productContainer" class="product-grid">
+
+<div class="product-card"
+data-category="Laptop"
+data-price="65000"
+data-rating="4.8">
+
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500">
+
+<h3>HP Pavilion Laptop</h3>
+
+<p>₹65,000</p>
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<button>View Details</button>
+
+</div>
+
+<div class="product-card"
+data-category="Laptop"
+data-price="72000"
+data-rating="4.9">
+
+<img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500">
+
+<h3>Dell Inspiron</h3>
+
+<p>₹72,000</p>
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<button>View Details</button>
+
+</div>
+
+<div class="product-card"
+data-category="Mobile"
+data-price="48000"
+data-rating="4.7">
+
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500">
+
+<h3>iPhone 15</h3>
+
+<p>₹48,000</p>
+
+<span>⭐⭐⭐⭐⭐</span>
+
+<button>View Details</button>
+
+</div>
+
+<div class="product-card"
+data-category="Mobile"
+data-price="32000"
+data-rating="4.6">
+
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500">
+
+<h3>Samsung Galaxy</h3>
+
+<p>₹32,000</p>
+
+<span>⭐⭐⭐⭐</span>
+
+<button>View Details</button>
+
+</div<!-- Product 5 -->
+<div class="product-card"
+data-category="Accessory"
+data-price="3999"
+data-rating="4.7">
+
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
+
+    <h3>Wireless Headphones</h3>
+
+    <p>₹3,999</p>
+
+    <span>⭐⭐⭐⭐⭐</span>
+
+    <button>View Details</button>
+
+</div>
+
+<!-- Product 6 -->
+<div class="product-card"
+data-category="Accessory"
+data-price="1999"
+data-rating="4.5">
+
+    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500" alt="Keyboard">
+
+    <h3>Mechanical Keyboard</h3>
+
+    <p>₹1,999</p>
+
+    <span>⭐⭐⭐⭐</span>
+
+    <button>View Details</button>
+
+</div>
+
+<!-- Product 7 -->
+<div class="product-card"
+data-category="Accessory"
+data-price="899"
+data-rating="4.4">
+
+    <img src="https://images.unsplash.com/photo-1527814050087-3793815479db?w=500" alt="Mouse">
+
+    <h3>Gaming Mouse</h3>
+
+    <p>₹899</p>
+
+    <span>⭐⭐⭐⭐</span>
+
+    <button>View Details</button>
+
+</div>
+
+<!-- Product 8 -->
+<div class="product-card"
+data-category="Accessory"
+data-price="4999"
+data-rating="4.8">
+
+    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500" alt="Smart Watch">
+
+    <h3>Smart Watch</h3>
+
+    <p>₹4,999</p>
+
+    <span>⭐⭐⭐⭐⭐</span>
+
+    <button>View Details</button>
+
+</div>
+
+<!-- Product 9 -->
+<div class="product-card"
+data-category="Laptop"
+data-price="135000"
+data-rating="5.0">
+
+    <img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500" alt="MacBook">
+
+    <h3>MacBook Air M3</h3>
+
+    <p>₹1,35,000</p>
+
+    <span>⭐⭐⭐⭐⭐</span>
+
+    <button>View Details</button>
+
+</div>
+
+<!-- Product 10 -->
+<div class="product-card"
+data-category="Mobile"
+data-price="59999"
+data-rating="4.9">
+
+    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500" alt="Google Pixel">
+
+    <h3>Google Pixel 9</h3>
+
+    <p>₹59,999</p>
+
+    <span>⭐⭐⭐⭐⭐</span>
+
+    <button>View Details</button>
+
+</div>
+
+<!-- Product 11 -->
+<div class="product-card"
+data-category="Accessory"
+data-price="2999"
+data-rating="4.6">
+
+    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500" alt="Camera">
+
+    <h3>Digital Camera</h3>
+
+    <p>₹2,999</p>
+
+    <span>⭐⭐⭐⭐⭐</span>
+
+    <button>View Details</button>
+
+</div>
+
+<!-- Product 12 -->
+<div class="product-card"
+data-category="Accessory"
+data-price="1499"
+data-rating="4.5">
+
+    <img src="https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=500" alt="Speaker">
+
+    <h3>Bluetooth Speaker</h3>
+
+    <p>₹1,499</p>
+
+    <span>⭐⭐⭐⭐</span>
+
+    <button>View Details</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>DevFusion Product Store</h2>
+
+    <p>
+        Professional Product Listing Page developed using
+        HTML, CSS & JavaScript.
+    </p>
+
+    <p>
+        Internship Project - ApexPlanet Software Pvt. Ltd.
+    </p>
+
+    <div class="footer-social">
+
+        <a href="#">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="#">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 DevFusion Store. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="product.js"></script>
+
+</body>
+</html>>

@@ -1,0 +1,501 @@
+/* ===============================
+   Google Font
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+/* ===============================
+   HEADER
+================================= */
+
+header{
+    width:100%;
+    background:#0f172a;
+    color:#fff;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo h2{
+    font-size:30px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:80px 8%;
+
+    min-height:90vh;
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+}
+
+.hero-text{
+    width:55%;
+}
+
+.hero-text h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero-text h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero button{
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#38bdf8;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.hero button:hover{
+
+    transform:translateY(-5px);
+
+    background:#2563eb;
+
+}
+
+.hero-image{
+
+    width:320px;
+    height:320px;
+
+}
+
+.hero-image img{
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:8px solid white;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+}
+
+/* ===============================
+   SECTION TITLE
+================================= */
+
+.title{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:#1e3a8a;
+
+    margin-bottom:50px;
+
+}
+
+section{
+
+    padding:80px 8%;
+
+}
+
+/* ===============================
+   CARD
+================================= */
+
+.card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    text-align:center;
+
+    font-size:18px;
+
+/* ===============================
+   EDUCATION
+================================= */
+
+.education-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.edu-card{
+    width:350px;
+    background:#ffffff;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.edu-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.edu-card i{
+    font-size:50px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+.edu-card h3{
+    margin-bottom:10px;
+    color:#1e3a8a;
+}
+
+.edu-card h4{
+    color:#16a34a;
+    margin-top:15px;
+}
+
+/* ===============================
+   SKILLS
+================================= */
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+}
+
+.skill{
+    background:#ffffff;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    font-size:18px;
+    font-weight:600;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.skill:hover{
+    background:#2563eb;
+    color:white;
+    transform:scale(1.08);
+}
+
+/* ===============================
+   PROJECTS
+================================= */
+
+.project-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.18);
+}
+
+.project-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* ===============================
+   CERTIFICATES
+================================= */
+
+.certificate-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.certificate{
+    width:320px;
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+    font-size:18px;
+}
+
+.certificate:hover{
+    background:#1e3a8a;
+    color:white;
+    transform:translateY(-8px);
+}
+
+.certificate i{
+    font-size:35px;
+    margin-bottom:15px;
+    color:gold;
+}
+
+/* ===============================
+   CONTACT
+================================= */
+
+.contact-box{
+    display:flex;
+    justify-content:center;
+}
+
+.contact-box form{
+    width:650px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus{
+    border-color:#2563eb;
+}
+
+.contact-box button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-box button:hover{
+    background:#1e40af;
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* ===============================
+   SCROLLBAR
+================================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ddd;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+@media(max-width:992px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding:60px 5%;
+}
+
+.hero-text{
+    width:100%;
+}
+
+.hero-text h1{
+    font-size:42px;
+}
+
+.hero-image{
+    width:250px;
+    height:250px;
+    margin-bottom:30px;
+}
+
+nav ul{
+    gap:15px;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.title{
+    font-size:32px;
+}
+
+.hero-text h1{
+    font-size:35px;
+}
+
+.hero-text h2{
+    font-size:22px;
+}
+
+.project-container,
+.skills-container{
+    grid-template-columns:1fr;
+}
+
+.contact-box form{
+    width:100%;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-text h1{
+    font-size:28px;
+}
+
+.hero-text p{
+    font-size:15px;
+}
+
+.hero button{
+    width:100%;
+}
+
+.logo h2{
+    font-size:24px;
+}
+
+}}

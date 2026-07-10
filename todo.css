@@ -1,0 +1,500 @@
+/* ==========================================
+   DEVFUSION TODO MANAGER
+   Developed by: Yalala Kavya Reddy
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --primary:#4F46E5;
+    --secondary:#7C3AED;
+    --accent:#06B6D4;
+    --success:#10B981;
+    --danger:#EF4444;
+    --warning:#F59E0B;
+    --light:#F8FAFC;
+    --dark:#111827;
+    --gray:#6B7280;
+    --white:#ffffff;
+    --shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+body{
+    background:linear-gradient(135deg,#eef2ff,#f8fafc);
+    color:var(--dark);
+    overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(15px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 8% 60px;
+    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+    color:white;
+}
+
+.hero h1{
+    font-size:52px;
+    margin:20px 0;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* ================= COMMON ================= */
+
+section{
+    padding:70px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:45px;
+    color:var(--primary);
+}
+
+/* ================= SUMMARY ================= */
+
+.summary{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card i{
+    font-size:45px;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.card h1{
+    margin-top:12px;
+    font-size:38px;
+}
+
+/* ================= TODO BOX ================= */
+
+.todo-box{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.todo-box input,
+.todo-box select{
+    padding:14px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:15px;
+    outline:none;
+}
+
+.todo-box input:focus,
+.todo-box select:focus{
+    border-color:var(--primary);
+}
+
+#addTask{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:white;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+#addTask:hover{
+    transform:translateY(-3px);
+}/*==========================
+SEARCH BOX
+==========================*/
+
+.search-box{
+    margin-top:30px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px 20px;
+    border:none;
+    border-radius:15px;
+    box-shadow:var(--shadow);
+    font-size:16px;
+    outline:none;
+}
+
+/*==========================
+TASK TABLE
+==========================*/
+
+.table-container{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+thead{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    color:#fff;
+}
+
+th,
+td{
+    padding:18px;
+    text-align:center;
+}
+
+tbody tr:nth-child(even){
+    background:#f8fafc;
+}
+
+tbody tr:hover{
+    background:#eef2ff;
+}
+
+button.edit{
+    background:#06B6D4;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:3px;
+}
+
+button.delete{
+    background:#EF4444;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:3px;
+}
+
+button.complete{
+    background:#10B981;
+    color:#fff;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:3px;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+/*==========================
+PROGRESS
+==========================*/
+
+.progress-card{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    text-align:center;
+}
+
+.progress-bar{
+    width:100%;
+    height:22px;
+    background:#ddd;
+    border-radius:30px;
+    overflow:hidden;
+    margin:30px 0;
+}
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(135deg,#10B981,#06B6D4);
+    transition:.6s;
+}
+
+#progressText{
+    color:var(--primary);
+    font-size:40px;
+}
+
+/*==========================
+PRODUCTIVITY TIPS
+==========================*/
+
+.tips-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.tip{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.tip:hover{
+    transform:translateY(-10px);
+}
+
+.tip i{
+    font-size:55px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.tip h3{
+    margin-bottom:15px;
+}
+
+.tip p{
+    color:var(--gray);
+    line-height:1.8;
+}
+
+/*==========================
+FOOTER
+==========================*/
+
+footer{
+    background:#111827;
+    color:#fff;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:10px 0;
+}
+
+.social{
+    margin:25px 0;
+}
+
+.social a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:45px;
+    height:45px;
+    margin:0 8px;
+    border-radius:50%;
+    background:#4F46E5;
+    color:#fff;
+    text-decoration:none;
+    transition:.4s;
+}
+
+.social a:hover{
+    background:#06B6D4;
+    transform:translateY(-6px);
+}
+
+.copyright{
+    margin-top:20px;
+    color:#cbd5e1;
+    font-size:14px;
+}
+
+/*==========================
+STATUS COLORS
+==========================*/
+
+.high{
+    color:#EF4444;
+    font-weight:700;
+}
+
+.medium{
+    color:#F59E0B;
+    font-weight:700;
+}
+
+.low{
+    color:#10B981;
+    font-weight:700;
+}
+
+.completed{
+    color:#10B981;
+    font-weight:700;
+}
+
+.pending{
+    color:#EF4444;
+    font-weight:700;
+}
+
+/*==========================
+ANIMATIONS
+==========================*/
+
+.card,
+.tip,
+.progress-card,
+.todo-box,
+table{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:992px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .summary{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+        min-height:50vh;
+        padding:120px 20px 60px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .title{
+        font-size:30px;
+    }
+
+    .summary{
+        grid-template-columns:1fr;
+    }
+
+    .todo-box{
+        grid-template-columns:1fr;
+    }
+
+    .tips-container{
+        grid-template-columns:1fr;
+    }
+
+    th,
+    td{
+        padding:12px;
+        font-size:14px;
+    }
+
+    #progressText{
+        font-size:28px;
+    }
+
+}
